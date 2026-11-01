@@ -2,6 +2,8 @@ import type { Album, Trait } from "../domain/types.js";
 import type Database from "better-sqlite3";
 
 export function createCatalogueSchema(db: Database.Database): void {
+  resetSchemaIfOutdated(db);
+
   db.exec(`
     CREATE TABLE IF NOT EXISTS albums (
       id TEXT PRIMARY KEY,
@@ -22,6 +24,21 @@ export function createCatalogueSchema(db: Database.Database): void {
 
     CREATE INDEX IF NOT EXISTS idx_album_traits_trait ON album_traits(trait);
   `);
+}
+
+function resetSchemaIfOutdated(db: Database.Database): void {
+  const columns = db
+    .prepare("PRAGMA table_info(albums)")
+    .all() as Array<{ name: string }>;
+
+  const hasEnergyColumn = columns.some((column) => column.name === "energy");
+  if (columns.length > 0 && !hasEnergyColumn) {
+    db.exec(`
+      DROP TABLE IF EXISTS album_tags;
+      DROP TABLE IF EXISTS album_traits;
+      DROP TABLE IF EXISTS albums;
+    `);
+  }
 }
 
 export function seedCatalogue(db: Database.Database, albums: Album[]): void {
