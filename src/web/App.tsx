@@ -152,28 +152,36 @@ export function App() {
           <h2 id="recommendations-heading" className="section-title">
             {selectedTags.size === 0
               ? "Select a tag to begin"
-              : "Three albums for you"}
+              : "Up to three albums for you"}
           </h2>
 
           {loadingRecommendations ? (
             <p className="status">Finding albums…</p>
           ) : (
-            <ul className="recommendations">
-              {recommendations.map((album) => (
-                <li key={album.id} className="album-card">
-                  <h3 className="album-title">{album.title}</h3>
-                  <p className="album-artist">{album.artist}</p>
-                  <p className="album-year">{album.year}</p>
-                  <div className="album-tags">
-                    {album.tags.map((tag) => (
-                      <span key={tag} className="album-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <>
+              {recommendations.length === 0 && selectedTags.size > 0 ? (
+                <p className="status">
+                  No albums match the selected tags. Try a different mood.
+                </p>
+              ) : (
+                <ul className="recommendations">
+                  {recommendations.map((album) => (
+                    <li key={album.id} className="album-card">
+                      <h3 className="album-title">{album.title}</h3>
+                      <p className="album-artist">{album.artist}</p>
+                      <p className="album-year">{album.year}</p>
+                      <div className="album-tags">
+                        {album.tags.map((tag) => (
+                          <span key={tag} className="album-tag">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
           )}
         </section>
       </main>

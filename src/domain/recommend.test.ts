@@ -58,4 +58,10 @@ describe("recommend", () => {
     const result = recommend(["CALM", " Piano "], albums);
     expect(result.map((a) => a.id)).toEqual(["a3", "a1"]);
   });
+
+  it("returns fewer than three matches without filler", () => {
+    const result = recommend(["vocal"], albums);
+    expect(result.length).toBeLessThan(3);
+    expect(result.every((album) => album.tags.includes("vocal"))).toBe(true);
+  });
 });
