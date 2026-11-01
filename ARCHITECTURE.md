@@ -30,8 +30,11 @@ server (Fastify)
 
 ## Key decisions
 
-- **Pure domain logic**: `recommend(selectedTags, albums)` is a simple,
-  deterministic, testable function.
+- **Pure domain logic**: `recommend(preferenceQuery, albums)` is a simple,
+  deterministic, testable function that ranks by EVC distance and trait matches.
+- **User tags → PreferenceQuery → domain**: user-facing discovery tags are mapped
+  to a small preference representation before ranking. This boundary keeps the
+  recommender independent of UI wording and open to future input styles.
 - **No ORM**: Direct SQL keeps data access explicit and the dependency surface
   small.
 - **No monorepo**: A single `package.json` is enough for this product.

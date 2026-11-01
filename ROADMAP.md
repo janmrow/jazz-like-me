@@ -2,27 +2,27 @@
 
 ## Now
 
-### M1 — First recommendation slice
+### M2 — Recommendation model v1
 
-- [x] Deterministic recommendation domain
-- [x] SQLite-backed catalogue of ten real jazz albums
-- [x] Fastify API with input validation
-- [x] Minimal, accessible React UI
-- [x] Domain, API, and browser tests
-- [x] CI verification workflow
+- [x] Energy / Valence / Complexity album profiles
+- [x] Calibrated 30-album catalogue
+- [x] PreferenceQuery boundary between user tags and ranking
+- [x] Deterministic EVC + trait ranking
+- [x] Mutually exclusive opposite axis tags
+- [x] Updated domain, API, and browser tests
+- [x] Calibration scenario evaluation
 
 ## Next
 
-### M2 — Recommendation quality and catalogue
+### M3 — Recommendation quality and input
 
-- Improve scoring when multiple albums tie.
-- Expand catalogue beyond ten albums while keeping the data model small.
-- Consider tag synonyms or a broader, still human-friendly tag set.
+- Gather feedback on real recommendation quality.
+- Consider track-level profiles or finer-grained tags only if feedback justifies it.
+- Keep the door open for natural-language input without building it yet.
 
 ## Later
 
 - Production deployment on Mikrus 2.1 VPS.
 - Basic observability (logs, error tracking).
 - Catalogue/data pipeline for adding albums without manual SQL edits.
-- Lightweight recommendation evaluation.
 - Optional LLM/Jev experiment for tags or explanations.
