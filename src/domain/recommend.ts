@@ -1,54 +1,82 @@
-import type { Album, Tag } from "./types.js";
-
-export interface RecommendationOptions {
-  limit?: number;
-}
+import type {
+  Album,
+  AlbumProfile,
+  PreferenceQuery,
+  RecommendationOptions,
+  Trait,
+} from "./types.js";
 
 export function recommend(
-  selectedTags: Tag[],
+  query: PreferenceQuery,
   albums: Album[],
   options: RecommendationOptions = {}
 ): Album[] {
+  const requestedAxes = Object.keys(query.target) as Array<keyof AlbumProfile>;
+
+  if (requestedAxes.length === 0 && query.requestedTraits.length === 0) {
+    return [];
+  }
+
   const limit = Math.max(1, Math.min(options.limit ?? 3, albums.length));
-  const normalizedSelected = selectedTags.map(normalizeTag);
 
   const scored = albums.map((album) => ({
     album,
-    score: scoreAlbum(album, normalizedSelected),
+    traitMatches: countTraitMatches(album, query.requestedTraits),
+    evcDistance: evcDistance(album.profile, query.target, requestedAxes),
   }));
 
   scored.sort(compareScores);
 
-  return scored
-    .filter((entry) => entry.score > 0)
-    .slice(0, limit)
-    .map((entry) => entry.album);
+  return scored.slice(0, limit).map((entry) => entry.album);
 }
 
-function scoreAlbum(album: Album, selectedTags: Tag[]): number {
-  const albumTags = new Set(album.tags.map(normalizeTag));
-  let score = 0;
-  for (const tag of selectedTags) {
-    if (albumTags.has(tag)) {
-      score += 1;
+function countTraitMatches(album: Album, requestedTraits: Trait[]): number {
+  const albumTraits = new Set(album.traits);
+  let matches = 0;
+  for (const trait of requestedTraits) {
+    if (albumTraits.has(trait)) {
+      matches += 1;
     }
   }
-  return score;
+  return matches;
 }
 
-function compareScores(
-  a: { album: Album; score: number },
-  b: { album: Album; score: number }
+function evcDistance(
+  profile: AlbumProfile,
+  target: Partial<AlbumProfile>,
+  axes: Array<keyof AlbumProfile>
 ): number {
-  if (b.score !== a.score) {
-    return b.score - a.score;
+  if (axes.length === 0) {
+    return 0;
   }
+
+  let total = 0;
+  for (const axis of axes) {
+    const targetValue = target[axis] ?? 50;
+    total += Math.abs(profile[axis] - targetValue) / 100;
+  }
+
+  return total / axes.length;
+}
+
+interface ScoredAlbum {
+  album: Album;
+  traitMatches: number;
+  evcDistance: number;
+}
+
+function compareScores(a: ScoredAlbum, b: ScoredAlbum): number {
+  if (b.traitMatches !== a.traitMatches) {
+    return b.traitMatches - a.traitMatches;
+  }
+
+  if (a.evcDistance !== b.evcDistance) {
+    return a.evcDistance - b.evcDistance;
+  }
+
   if (a.album.year !== b.album.year) {
     return a.album.year - b.album.year;
   }
-  return a.album.title.localeCompare(b.album.title);
-}
 
-function normalizeTag(tag: Tag): Tag {
-  return tag.trim().toLowerCase();
+  return a.album.title.localeCompare(b.album.title);
 }
