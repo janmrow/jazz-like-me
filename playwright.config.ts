@@ -1,7 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
-import path from "node:path";
 
-const databasePath = path.resolve("/tmp/opencode/jazz-like-me-e2e.db");
 const port = 3001;
 
 export default defineConfig({
@@ -22,7 +20,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: `npm run build && DATABASE_PATH=${databasePath} PORT=${port} npm start`,
+    command: `npm run build && DATABASE_PATH=:memory: PORT=${port} npm start`,
     url: `http://localhost:${port}`,
     reuseExistingServer: false,
     timeout: 120 * 1000,
