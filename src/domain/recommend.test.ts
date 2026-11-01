@@ -75,6 +75,33 @@ describe("recommend", () => {
     expect(result[0].id).toBe("a3");
   });
 
+  it("prefers a trait match over a closer non-trait match", () => {
+    const farPiano: Album = {
+      id: "far-piano",
+      artist: "Test Artist",
+      title: "Far Piano Album",
+      year: 1970,
+      profile: { energy: 100, valence: 100, complexity: 100 },
+      traits: ["piano-led"],
+    };
+    const closeNonPiano: Album = {
+      id: "close-non-piano",
+      artist: "Test Artist",
+      title: "Close Non-Piano Album",
+      year: 1971,
+      profile: { energy: 25, valence: 25, complexity: 25 },
+      traits: [],
+    };
+
+    const result = recommend(
+      { target: { energy: 25 }, requestedTraits: ["piano-led"] },
+      [farPiano, closeNonPiano]
+    );
+
+    expect(result[0].id).toBe("far-piano");
+    expect(result[1].id).toBe("close-non-piano");
+  });
+
   it("falls back to best EVC match when fewer than three albums match all traits", () => {
     const requestedTraits: Trait[] = ["piano-led", "live"];
     const result = recommend(
