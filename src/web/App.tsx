@@ -122,7 +122,7 @@ export function App() {
     <div className="app">
       <header className="header">
         <h1 className="title">Jazz Like Me</h1>
-        <p className="subtitle">Find three jazz albums that fit your mood.</p>
+        <p className="subtitle">Find up to three jazz albums that fit your mood.</p>
       </header>
 
       <main className="main">

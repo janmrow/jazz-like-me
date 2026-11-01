@@ -2,7 +2,7 @@
   "name": "jazz-like-me",
   "version": "0.1.0",
   "private": true,
-  "description": "Find three jazz albums that fit your mood.",
+  "description": "Find up to three jazz albums that fit your mood.",
   "type": "module",
   "engines": {
     "node": ">=26.0.0"

@@ -2,7 +2,7 @@
 
 ## Promise
 
-> Find three jazz albums that fit your mood.
+> Find up to three jazz albums that fit your mood.
 
 ## Core user flow
 
