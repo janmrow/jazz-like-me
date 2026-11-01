@@ -5,7 +5,7 @@ interface Album {
   artist: string;
   title: string;
   year: number;
-  tags: string[];
+  traits: string[];
 }
 
 interface RecommendationsResponse {
@@ -15,6 +15,15 @@ interface RecommendationsResponse {
 interface TagsResponse {
   tags: string[];
 }
+
+const oppositeTagByTag: Record<string, string | undefined> = {
+  calm: "energetic",
+  energetic: "calm",
+  melancholic: "uplifting",
+  uplifting: "melancholic",
+  accessible: "adventurous",
+  adventurous: "accessible",
+};
 
 export function App() {
   const [tags, setTags] = useState<string[]>([]);
@@ -91,6 +100,10 @@ export function App() {
       if (next.has(tag)) {
         next.delete(tag);
       } else {
+        const opposite = oppositeTagByTag[tag];
+        if (opposite) {
+          next.delete(opposite);
+        }
         next.add(tag);
       }
       return next;
@@ -171,9 +184,9 @@ export function App() {
                       <p className="album-artist">{album.artist}</p>
                       <p className="album-year">{album.year}</p>
                       <div className="album-tags">
-                        {album.tags.map((tag) => (
-                          <span key={tag} className="album-tag">
-                            {tag}
+                        {album.traits.map((trait) => (
+                          <span key={trait} className="album-tag">
+                            {trait}
                           </span>
                         ))}
                       </div>

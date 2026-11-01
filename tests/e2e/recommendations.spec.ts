@@ -1,15 +1,15 @@
 import { test, expect } from "@playwright/test";
 
-test("selecting a tag shows jazz album recommendations", async ({ page }) => {
+test("selecting discovery tags shows jazz album recommendations", async ({ page }) => {
   await page.goto("/");
 
   await expect(
     page.getByRole("heading", { name: "Jazz Like Me" })
   ).toBeVisible();
 
-  const tagButton = page.getByRole("checkbox", { name: "calm" });
-  await tagButton.click();
-  await expect(tagButton).toHaveAttribute("aria-checked", "true");
+  const calmButton = page.getByRole("checkbox", { name: "calm" });
+  await calmButton.click();
+  await expect(calmButton).toHaveAttribute("aria-checked", "true");
 
   await expect(
     page.getByRole("heading", { name: "Up to three albums for you" })
@@ -21,4 +21,11 @@ test("selecting a tag shows jazz album recommendations", async ({ page }) => {
   const firstAlbum = recommendations.first();
   await expect(firstAlbum.locator(".album-title")).not.toBeEmpty();
   await expect(firstAlbum.locator(".album-artist")).not.toBeEmpty();
+
+  const energeticButton = page.getByRole("checkbox", { name: "energetic" });
+  await energeticButton.click();
+  await expect(energeticButton).toHaveAttribute("aria-checked", "true");
+  await expect(calmButton).toHaveAttribute("aria-checked", "false");
+
+  await expect(recommendations).toHaveCount(3);
 });
