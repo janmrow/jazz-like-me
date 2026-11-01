@@ -1,8 +1,8 @@
 # Jazz Like Me
 
-> Find three jazz albums that fit your mood.
+> Find up to three jazz albums that fit your mood.
 
-A tiny, focused web app. Pick one or more tags and get three jazz album
+A tiny, focused web app. Pick one or more tags and get up to three jazz album
 recommendations from a small, deterministic catalogue.
 
 ## Quick start

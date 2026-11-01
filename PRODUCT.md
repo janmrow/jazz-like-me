@@ -8,7 +8,7 @@
 
 1. Open the app.
 2. Select one or more mood tags.
-3. Receive three jazz album recommendations.
+3. Receive up to three jazz album recommendations.
 
 ## Current scope
 
