@@ -17,10 +17,8 @@
 web (React + Vite)
   ↓ HTTP
 server (Fastify)
-  ↓ function call
-domain (pure recommendation logic)
-  ↓ function call
-db (SQLite)
+  ├─→ domain (pure recommendation logic)
+  └─→ db (SQLite)
 ```
 
 ## Dependency direction
