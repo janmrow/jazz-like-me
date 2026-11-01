@@ -12,7 +12,7 @@ test("selecting a tag shows jazz album recommendations", async ({ page }) => {
   await expect(tagButton).toHaveAttribute("aria-checked", "true");
 
   await expect(
-    page.getByRole("heading", { name: /albums for you/i })
+    page.getByRole("heading", { name: "Up to three albums for you" })
   ).toBeVisible();
 
   const recommendations = page.locator(".recommendations .album-card");
