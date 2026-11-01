@@ -50,10 +50,13 @@ export function App() {
     }
 
     const query = Array.from(selectedTags).join(",");
+    const abortController = new AbortController();
     setLoadingRecommendations(true);
     setError(null);
 
-    fetch(`/api/recommendations?tags=${encodeURIComponent(query)}`)
+    fetch(`/api/recommendations?tags=${encodeURIComponent(query)}`, {
+      signal: abortController.signal,
+    })
       .then(async (response) => {
         if (!response.ok) {
           const body = await response.json().catch(() => ({}));
@@ -65,12 +68,21 @@ export function App() {
         setRecommendations(data.recommendations);
       })
       .catch((err) => {
+        if (err instanceof Error && err.name === "AbortError") {
+          return;
+        }
         setError(err instanceof Error ? err.message : "Something went wrong");
         setRecommendations([]);
       })
       .finally(() => {
-        setLoadingRecommendations(false);
+        if (!abortController.signal.aborted) {
+          setLoadingRecommendations(false);
+        }
       });
+
+    return () => {
+      abortController.abort();
+    };
   }, [selectedTags]);
 
   const toggleTag = (tag: string) => {
