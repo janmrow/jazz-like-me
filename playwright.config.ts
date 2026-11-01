@@ -1,4 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
+import path from "node:path";
+
+const databasePath = path.resolve("/tmp/opencode/jazz-like-me-e2e.db");
+const port = 3001;
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -8,7 +12,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: "list",
   use: {
-    baseURL: "http://localhost:5173",
+    baseURL: `http://localhost:${port}`,
     trace: "on-first-retry",
   },
   projects: [
@@ -18,9 +22,9 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev",
-    url: "http://localhost:5173",
-    reuseExistingServer: !process.env.CI,
+    command: `npm run build && DATABASE_PATH=${databasePath} PORT=${port} npm start`,
+    url: `http://localhost:${port}`,
+    reuseExistingServer: false,
     timeout: 120 * 1000,
   },
 });
