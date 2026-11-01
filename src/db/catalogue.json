@@ -1,0 +1,447 @@
+[
+  {
+    "id": "louis-armstrong-plays-wc-handy",
+    "artist": "Louis Armstrong",
+    "title": "Louis Armstrong Plays W.C. Handy",
+    "year": 1954,
+    "musicbrainzReleaseGroupId": "3c6e5005-cad2-4444-825f-71e4b8324d51",
+    "profile": {
+      "energy": 75,
+      "valence": 75,
+      "complexity": 25
+    },
+    "traits": [
+      "vocal"
+    ]
+  },
+  {
+    "id": "art-blakey-a-night-at-birdland-volume-1",
+    "artist": "The Art Blakey Quintet",
+    "title": "A Night at Birdland, Volume 1",
+    "year": 1956,
+    "musicbrainzReleaseGroupId": "dcb10e95-ce52-3b1d-9ad6-6189150ef8c0",
+    "profile": {
+      "energy": 75,
+      "valence": 75,
+      "complexity": 50
+    },
+    "traits": [
+      "live"
+    ],
+    "annotationNote": "Profile refers to the 1956 12-inch album programme (BLP 1521), recorded in 1954, excluding later bonus material."
+  },
+  {
+    "id": "count-basie-april-in-paris",
+    "artist": "Count Basie and His Orchestra",
+    "title": "April in Paris",
+    "year": 1957,
+    "musicbrainzReleaseGroupId": "bae9e6bd-cb30-3207-84db-e908e9d9dc5c",
+    "profile": {
+      "energy": 75,
+      "valence": 75,
+      "complexity": 25
+    },
+    "traits": []
+  },
+  {
+    "id": "ahmad-jamal-at-the-pershing-but-not-for-me",
+    "artist": "Ahmad Jamal Trio",
+    "title": "Ahmad Jamal at the Pershing: But Not for Me",
+    "year": 1958,
+    "musicbrainzReleaseGroupId": "0a8e97fd-457c-30bc-938a-2fba79cb04e7",
+    "profile": {
+      "energy": 50,
+      "valence": 75,
+      "complexity": 25
+    },
+    "traits": [
+      "piano-led",
+      "live"
+    ]
+  },
+  {
+    "id": "billie-holiday-lady-in-satin",
+    "artist": "Billie Holiday",
+    "title": "Lady in Satin",
+    "year": 1958,
+    "musicbrainzReleaseGroupId": "cf7bc239-a3ba-3d87-80e5-261f750cb560",
+    "profile": {
+      "energy": 25,
+      "valence": 0,
+      "complexity": 25
+    },
+    "traits": [
+      "vocal"
+    ]
+  },
+  {
+    "id": "ornette-coleman-the-shape-of-jazz-to-come",
+    "artist": "Ornette Coleman",
+    "title": "The Shape of Jazz to Come",
+    "year": 1959,
+    "musicbrainzReleaseGroupId": "5879cfca-e1d0-3ef4-8014-3b284832ed18",
+    "profile": {
+      "energy": 75,
+      "valence": 50,
+      "complexity": 75
+    },
+    "traits": [],
+    "annotationNote": "Plaintive themes coexist with buoyant, fast improvisation; valence is deliberately mixed."
+  },
+  {
+    "id": "ella-fitzgerald-mack-the-knife-ella-in-berlin",
+    "artist": "Ella Fitzgerald and The Paul Smith Quartet",
+    "title": "Mack the Knife: Ella in Berlin",
+    "year": 1960,
+    "musicbrainzReleaseGroupId": "b6e1a652-1378-4e67-9104-04e458e7d2a4",
+    "profile": {
+      "energy": 75,
+      "valence": 100,
+      "complexity": 50
+    },
+    "traits": [
+      "vocal",
+      "live"
+    ]
+  },
+  {
+    "id": "jimmy-giuffre-free-fall",
+    "artist": "Jimmy Giuffre",
+    "title": "Free Fall",
+    "year": 1963,
+    "musicbrainzReleaseGroupId": "1a5bb395-7dc2-3f11-9e46-ccbfa33ddd3b",
+    "profile": {
+      "energy": 25,
+      "valence": 50,
+      "complexity": 100
+    },
+    "traits": []
+  },
+  {
+    "id": "getz-gilberto",
+    "artist": "Stan Getz / João Gilberto featuring Antônio Carlos Jobim",
+    "title": "Getz/Gilberto",
+    "year": 1964,
+    "musicbrainzReleaseGroupId": "b248d212-aace-3c3e-a23d-e13aaac1f87a",
+    "profile": {
+      "energy": 25,
+      "valence": 75,
+      "complexity": 25
+    },
+    "traits": [
+      "vocal"
+    ]
+  },
+  {
+    "id": "cecil-taylor-unit-structures",
+    "artist": "Cecil Taylor",
+    "title": "Unit Structures",
+    "year": 1966,
+    "musicbrainzReleaseGroupId": "370d6fb7-8a0b-3e3e-a5f4-d0fcdf2869a1",
+    "profile": {
+      "energy": 75,
+      "valence": 50,
+      "complexity": 100
+    },
+    "traits": [
+      "piano-led"
+    ],
+    "annotationNote": "Dense ensemble passages alternate with more spacious material; energy is 75 rather than 100."
+  },
+  {
+    "id": "peter-brotzmann-octet-machine-gun",
+    "artist": "Peter Brötzmann Octet",
+    "title": "Machine Gun",
+    "year": 1968,
+    "musicbrainzReleaseGroupId": "be1d0c36-59b0-3dc7-8bcf-4e5f4009ec85",
+    "profile": {
+      "energy": 100,
+      "valence": 50,
+      "complexity": 100
+    },
+    "traits": [],
+    "annotationNote": "Confrontational and ecstatic readings both fit; abrasive sound is not treated as evidence of sadness."
+  },
+  {
+    "id": "miles-davis-in-a-silent-way",
+    "artist": "Miles Davis",
+    "title": "In a Silent Way",
+    "year": 1969,
+    "musicbrainzReleaseGroupId": "7d0a9612-7636-34fe-84d9-445c8df9c0f3",
+    "profile": {
+      "energy": 25,
+      "valence": 50,
+      "complexity": 50
+    },
+    "traits": []
+  },
+  {
+    "id": "alice-coltrane-journey-in-satchidananda",
+    "artist": "Alice Coltrane featuring Pharoah Sanders",
+    "title": "Journey in Satchidananda",
+    "year": 1971,
+    "musicbrainzReleaseGroupId": "cf154081-2678-3778-95cf-cd31c4ea5dfe",
+    "profile": {
+      "energy": 50,
+      "valence": 75,
+      "complexity": 50
+    },
+    "traits": [],
+    "annotationNote": "Includes a live closing performance, but the album as a whole is not a live album; harp dominates over piano."
+  },
+  {
+    "id": "mahavishnu-orchestra-the-inner-mounting-flame",
+    "artist": "The Mahavishnu Orchestra with John McLaughlin",
+    "title": "The Inner Mounting Flame",
+    "year": 1971,
+    "musicbrainzReleaseGroupId": "cc166f72-5bb4-3534-941f-e974b20604aa",
+    "profile": {
+      "energy": 100,
+      "valence": 50,
+      "complexity": 75
+    },
+    "traits": [],
+    "annotationNote": "Quieter acoustic passages interrupt a predominantly forceful electric album."
+  },
+  {
+    "id": "paul-bley-open-to-love",
+    "artist": "Paul Bley",
+    "title": "Open, to Love",
+    "year": 1973,
+    "musicbrainzReleaseGroupId": "c03898ec-44bb-3d70-81a7-b4021c7a5159",
+    "profile": {
+      "energy": 25,
+      "valence": 25,
+      "complexity": 75
+    },
+    "traits": [
+      "piano-led"
+    ]
+  },
+  {
+    "id": "herbie-hancock-head-hunters",
+    "artist": "Herbie Hancock",
+    "title": "Head Hunters",
+    "year": 1973,
+    "musicbrainzReleaseGroupId": "322f18bb-5491-38e9-9044-c0a468651eec",
+    "profile": {
+      "energy": 75,
+      "valence": 75,
+      "complexity": 50
+    },
+    "traits": [],
+    "annotationNote": "Synthesizers, clavinet and electric piano form a keyboard palette; piano-led is omitted conservatively rather than inferred from the bandleader."
+  },
+  {
+    "id": "keith-jarrett-the-koln-concert",
+    "artist": "Keith Jarrett",
+    "title": "The Köln Concert",
+    "year": 1975,
+    "musicbrainzReleaseGroupId": "516d4629-7bf3-3ac3-907a-ed9a022db840",
+    "profile": {
+      "energy": 50,
+      "valence": 75,
+      "complexity": 50
+    },
+    "traits": [
+      "piano-led",
+      "live"
+    ],
+    "annotationNote": "Lyrical passages and insistent rhythmic vamps both matter; not uniformly quiet solo piano."
+  },
+  {
+    "id": "abdullah-ibrahim-water-from-an-ancient-well",
+    "artist": "Abdullah Ibrahim",
+    "title": "Water From an Ancient Well",
+    "year": 1986,
+    "musicbrainzReleaseGroupId": "53926047-68bc-36a6-95f8-9209f285c95d",
+    "profile": {
+      "energy": 50,
+      "valence": 75,
+      "complexity": 50
+    },
+    "traits": []
+  },
+  {
+    "id": "cassandra-wilson-blue-light-til-dawn",
+    "artist": "Cassandra Wilson",
+    "title": "Blue Light ’Til Dawn",
+    "year": 1993,
+    "musicbrainzReleaseGroupId": "57c53976-86a5-3cb8-913e-ecfc2874918d",
+    "profile": {
+      "energy": 25,
+      "valence": 25,
+      "complexity": 50
+    },
+    "traits": [
+      "vocal"
+    ]
+  },
+  {
+    "id": "keith-jarrett-the-melody-at-night-with-you",
+    "artist": "Keith Jarrett",
+    "title": "The Melody at Night, With You",
+    "year": 1999,
+    "musicbrainzReleaseGroupId": "6d6a83dd-05ac-3de1-887f-e0da7a603532",
+    "profile": {
+      "energy": 0,
+      "valence": 25,
+      "complexity": 25
+    },
+    "traits": [
+      "piano-led"
+    ],
+    "annotationNote": "Intimate and tender as well as wistful; valence 25 is a provisional choice over 50."
+  },
+  {
+    "id": "the-necks-aether",
+    "artist": "The Necks",
+    "title": "Aether",
+    "year": 2001,
+    "musicbrainzReleaseGroupId": "1ea9fbef-0665-3dfb-9b46-844220b34456",
+    "profile": {
+      "energy": 0,
+      "valence": 50,
+      "complexity": 75
+    },
+    "traits": [
+      "piano-led"
+    ],
+    "annotationNote": "Slow textural development is the challenge; sparse instrumentation does not imply easy, conventional song forms."
+  },
+  {
+    "id": "norah-jones-come-away-with-me",
+    "artist": "Norah Jones",
+    "title": "Come Away With Me",
+    "year": 2002,
+    "musicbrainzReleaseGroupId": "6ccac9d2-22ed-33de-bd5d-f2aadcacf7f8",
+    "profile": {
+      "energy": 25,
+      "valence": 75,
+      "complexity": 0
+    },
+    "traits": [
+      "vocal",
+      "piano-led"
+    ],
+    "annotationNote": "Jazz/pop/country crossover retained deliberately as the directness anchor; low complexity is not a quality judgement."
+  },
+  {
+    "id": "tord-gustavsen-trio-changing-places",
+    "artist": "Tord Gustavsen Trio",
+    "title": "Changing Places",
+    "year": 2003,
+    "musicbrainzReleaseGroupId": "73208f8b-e4b6-3233-a070-be15076f254c",
+    "profile": {
+      "energy": 25,
+      "valence": 25,
+      "complexity": 25
+    },
+    "traits": [
+      "piano-led"
+    ]
+  },
+  {
+    "id": "matana-roberts-coin-coin-chapter-one",
+    "artist": "Matana Roberts",
+    "title": "Coin Coin Chapter One: Gens de couleur libres",
+    "year": 2011,
+    "musicbrainzReleaseGroupId": "30bb9be4-c39a-4803-b19f-eb171b88ab04",
+    "profile": {
+      "energy": 75,
+      "valence": 25,
+      "complexity": 100
+    },
+    "traits": [
+      "vocal",
+      "live"
+    ],
+    "annotationNote": "Recorded before an audience at Hotel2Tango; historical testimony, grief, communal celebration and eruptions coexist."
+  },
+  {
+    "id": "esperanza-spalding-emilys-d-evolution",
+    "artist": "Esperanza Spalding",
+    "title": "Emily’s D+Evolution",
+    "year": 2016,
+    "musicbrainzReleaseGroupId": "68b352ae-a374-4535-834a-96e920782e8f",
+    "profile": {
+      "energy": 75,
+      "valence": 50,
+      "complexity": 75
+    },
+    "traits": [
+      "vocal"
+    ],
+    "annotationNote": "Jazz/prog/art-pop crossover; vocal melodies remain prominent despite angular harmony and rhythm."
+  },
+  {
+    "id": "nik-bartschs-ronin-awase",
+    "artist": "Nik Bärtsch’s Ronin",
+    "title": "Awase",
+    "year": 2018,
+    "musicbrainzReleaseGroupId": "79633326-6602-4c57-94c8-fcc043b54f50",
+    "profile": {
+      "energy": 50,
+      "valence": 50,
+      "complexity": 75
+    },
+    "traits": [
+      "piano-led"
+    ]
+  },
+  {
+    "id": "sons-of-kemet-your-queen-is-a-reptile",
+    "artist": "Sons of Kemet",
+    "title": "Your Queen Is a Reptile",
+    "year": 2018,
+    "musicbrainzReleaseGroupId": "d5f67e27-8871-4219-8c6a-2e2884c450a8",
+    "profile": {
+      "energy": 75,
+      "valence": 75,
+      "complexity": 50
+    },
+    "traits": [],
+    "annotationNote": "Guest voices frame parts of the album; the dominant saxophone/tuba/two-drummer identity is treated as instrumental."
+  },
+  {
+    "id": "nala-sinephro-space-1-8",
+    "artist": "Nala Sinephro",
+    "title": "Space 1.8",
+    "year": 2021,
+    "musicbrainzReleaseGroupId": "2458a981-bc0e-4359-8f3b-b53c25ed4830",
+    "profile": {
+      "energy": 25,
+      "valence": 75,
+      "complexity": 50
+    },
+    "traits": []
+  },
+  {
+    "id": "cecile-mclorin-salvant-ghost-song",
+    "artist": "Cécile McLorin Salvant",
+    "title": "Ghost Song",
+    "year": 2022,
+    "musicbrainzReleaseGroupId": "fae3e024-cef1-4ba1-9654-02033dc684be",
+    "profile": {
+      "energy": 25,
+      "valence": 25,
+      "complexity": 50
+    },
+    "traits": [
+      "vocal"
+    ]
+  },
+  {
+    "id": "mary-halvorson-amaryllis",
+    "artist": "Mary Halvorson",
+    "title": "Amaryllis",
+    "year": 2022,
+    "musicbrainzReleaseGroupId": "3644ea24-17c4-43e0-a8ef-d4c5ea862b23",
+    "profile": {
+      "energy": 50,
+      "valence": 50,
+      "complexity": 75
+    },
+    "traits": []
+  }
+]
